@@ -20,8 +20,6 @@ public
 class GoogleAuthProvider implements AuthenticationProvider {
     @Autowired
     PasswordEncoder passwordEncoder;
-    @Autowired
-    private AuthDetailsService authDetailsService;
 
     @Override
     public Authentication authenticate(Authentication authentication) throws AuthenticationException {
