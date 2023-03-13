@@ -27,7 +27,9 @@ class AuthController {
             String jwtToken = jwtTokenUtils.generate(username);
             return CustomResponse.successMsg(jwtToken);
         } catch (BadCredentialsException e) {
-            return CustomResponse.errorMsg("Password or username is wrong");
+            String message = "Check your username or password";
+            return CustomResponse.errorMsg(message);
+            //throw new CustomApiException(message, ErrorCodes.CUSTOMIZED_ERROR_CODE);
         }
     }
 

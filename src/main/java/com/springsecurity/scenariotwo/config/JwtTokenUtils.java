@@ -11,7 +11,7 @@ import java.util.Date;
 @Service
 public class JwtTokenUtils {
     long expireTime = 36_000_000;
-    String secretKey = "442A462D4A614E645267556B58703273357638792F423F4528482B4B62506553";
+    String secretKey = "70264B76F715F35376248204525A234575342B2428B26569546856344A83ED46";
 
     public String generate(String username) {
         Date expireDate = new Date(System.currentTimeMillis() + expireTime);
